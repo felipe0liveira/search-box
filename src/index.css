@@ -8,64 +8,109 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
+  background-color: #fafafa;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.title {
-  font-family: 'Quicksand', sans-serif;
+nav {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 10px 20px;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #dddddd;
+}
+
+nav button#add {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+  border: 2px solid #a3a3a3;
+  background-color: transparent;
+  box-shadow: 0 0 10px #dddddd;
+
+  color: #a3a3a3;
+
+  font-size: 20px;
+
+  transition: 0.5s ease;
+}
+
+nav button#add:hover {
+  border-color: #ff0062;
+  background-color: #fff5f8;
+  box-shadow: 0 0 10px #ff83b0;
+
+  color: #ff0062;
+  cursor: pointer;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 90px);
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  padding: 15px;
 }
 
 .container .search-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 25px;
 }
 
 .container .search-box input {
-  width: 400px;
+  width: 100%;
   height: 40px;
 
   padding: 15px;
 }
 
-.container .search-box .refs-label {
-  max-width: 400px;
-  margin-top: 5px;
-  text-transform: uppercase;
-  font-size: 10px;
-  color: #424242;
-}
-
 .container .result-box {
-  max-height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
   overflow-y: auto;
 }
+
+@media (min-width: 768px) {
+  .container .result-box {
+    width: 50%;
+  }
+}
+
 .container .result-box > div {
-  width: 350px;
-  padding: 10px;
-
-  margin-bottom: 15px;
-
-  background-color: #f8f8f8;
-  border: 1px solid #eeeeee;
+  padding: 15px 10px;
+  border-bottom: 2px dashed #eeeeee;
 }
 
 .container .result-box > div small {
   color: #bdbdbd;
+}
+
+/* Desktop Changes */
+@media (min-width: 768px) {
+  .container .search-box {
+    width: 40%;
+  }
+
+  .container .result-box {
+    width: 50%;
+  }
+
+  .container .result-box > div {
+    padding: 15px 10px;
+    margin-top: 15px;
+
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+  }
 }
