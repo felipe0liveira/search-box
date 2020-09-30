@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Quicksand&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container .search-box {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 25px;
+}
+
+.container .search-box input {
+  width: 400px;
+  height: 40px;
+
+  padding: 15px;
+}
+
+.container .search-box .refs-label {
+  max-width: 400px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #424242;
+}
+
+.container .result-box {
+  max-height: 90%;
+  overflow-y: auto;
+}
+.container .result-box > div {
+  width: 350px;
+  padding: 10px;
+
+  margin-bottom: 15px;
+
+  background-color: #f8f8f8;
+  border: 1px solid #eeeeee;
+}
+
+.container .result-box > div small {
+  color: #bdbdbd;
+}
